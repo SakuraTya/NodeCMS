@@ -18,6 +18,7 @@
 	</div>
 </div>
 {% include 'theme/navbar.swig' %}
+{% block body %}{% endblock %}
 {% block js %}
 {{ js('js/jquery-1.8.0.min.js') }}
 {{ js('js/jquery.lavalamp-1.4.min.js') }}
