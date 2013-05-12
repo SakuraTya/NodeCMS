@@ -7,7 +7,7 @@ require('zappajs').run server_opts,->
 
 	RedisStore = require('connect-redis')(@express)
 
-	@use 'bodyParser', 'cookieParser','methodOverride', @express.session(store:new RedisStore(),secret:'nya'),@app.router
+	@use 'bodyParser', 'cookieParser','methodOverride', @express.session(store:new RedisStore(),secret:'nya'),@app.router,'errorHandler'
 	@app.engine('.swig', cons.swig)
 	@app.set('view engine', 'html')
 
@@ -25,3 +25,30 @@ require('zappajs').run server_opts,->
 							{name:'新番',id:'aDr'}
 							{name:'直角',id:'aDC'}
 						]
+						posts:[
+							{
+								url:'http://127.0.0.1'
+								title:'Testing~Testing~'
+								dl_count:12
+								comm_count:20
+								fav_count:233
+								prev:'/static/img/prev2.jpg'
+								prev_big:'/static/img/prev2.jpg'
+								tags:[
+									{name:'新番',id:'aDr'}
+									{name:'直角',id:'aDC'}
+								]
+								author:{
+									url:'http://127.0.0.1'
+									name:'加大号的猫'
+								}
+							}
+						]
+
+
+
+	@get '/admin': ->
+		@render 'admin/dashboard.swig',
+			is_admin:true
+			user:
+				display_name:'加大号的猫'

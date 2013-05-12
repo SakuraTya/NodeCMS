@@ -47,7 +47,10 @@
 	</div>
 	<!--This is works panel area where all panels place here, a template should modify to a loop structure-->
 	<div class="works_panel_wrapper">
-
+		{% for post in posts %}
+			{% include "theme/post-block.swig" with post only %}
+		{% endfor %}
+		<div style="clear:both;display:block;"></div>
 	</div>
 	<div class="page_navigator_holder">
 		<a id="pop_more_content_button" class="more_content_button_wrapper" href="/category">

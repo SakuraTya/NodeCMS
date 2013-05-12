@@ -2,10 +2,10 @@
 	<div class="work_content_wrapper">
 		<div class="preview_img_wrapper">
 			<a href="{{ url }}">
-				<img src="img/prev1.jpg" />
+				<img src="{{ prev }}" />
 			</a>
 			<div class="img_lightbox_controls">
-				<a href="img/prev2_big.jpg" class="zoom_in_tool"></a>
+				<a href="{{ prev_big }}" class="zoom_in_tool"></a>
 			</div>
 		</div>
 		<div class="work_title">
@@ -15,14 +15,13 @@
 		</div>
 		<div class="work_author">
 			<span>by</span>
-			<a href="{{ author_url }}">
-				{{ author_name }}
+			<a href="{{ author.url }}">
+				{{ author.name }}
 			</a>
 		</div>
 		<div class="work_tags">
 			<!-- data attribute in li element is tagID, the text is tagName -->
 			<ul>
-				<li data="0000">Windows 7</li>
 				{% for tag in tags %}<li data-id="{{ tag.id }}">{{ tag.name }}</li>{% endfor %}
 				<div style="clear:both;display:block;"></div>
 			</ul>
