@@ -1,25 +1,25 @@
 function dropDownTimeSelectorForPop() {
     var api = "/api/time";
-    $("#time_selector_for_pop").jDropDownControl({
+    $("#time-selector-for-pop").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
             console.log(data);
             // var time = $.parseJSON(data);
-            $("#time_selector_for_pop div.drop_down_wrapper").children("span").text($(target).text());
+            $("#time-selector-for-pop div.drop_down_wrapper").children("span").text($(target).text());
             if(data){
                 // window.location = api+"?time="+data;
                 
             }
         }
     });
-    $("#time_selector_for_new").jDropDownControl({
+    $("#time-selector-for-new").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
             console.log(data);
             // var time = $.parseJSON(data);
-            $("#time_selector_for_new div.drop_down_wrapper").children("span").text($(target).text());
+            $("#time-selector-for-new div.drop_down_wrapper").children("span").text($(target).text());
             if(data){
                 // window.location = api+"?time="+data;
                 
@@ -30,23 +30,23 @@ function dropDownTimeSelectorForPop() {
 
 function dropDownPlatformSelectorForPop() {
     var api="/api/platform";
-    $("#platform_selector_for_pop").jDropDownControl({
+    $("#platform-selector-for-pop").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
             console.log(data);
-            $("#platform_selector_for_pop div.drop_down_wrapper").children("span").text($(target).text());
+            $("#platform-selector-for-pop div.drop_down_wrapper").children("span").text($(target).text());
             if(data) {
                 // window.location = api+"?platform="+data;
             }
         }
     });
-    $("#platform_selector_for_new").jDropDownControl({
+    $("#platform-selector-for-new").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
             console.log(data);
-            $("#platform_selector_for_new div.drop_down_wrapper").children("span").text($(target).text());
+            $("#platform-selector-for-new div.drop_down_wrapper").children("span").text($(target).text());
             if(data) {
                 // window.location = api+"?platform="+data;
             }
@@ -56,7 +56,7 @@ function dropDownPlatformSelectorForPop() {
 
 function dropDownTagsSelectorForPop() {
     var api="/api/tags";
-    $("#tags_selector_for_pop").jDropDownControl({
+    $("#tags-selector-for-pop").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
@@ -68,7 +68,7 @@ function dropDownTagsSelectorForPop() {
         "width": "200px",
         "defaultLabel": "TAGs"
     });
-    $("#tags_selector_for_new").jDropDownControl({
+    $("#tags-selector-for-new").jDropDownControl({
         "click":function(index, event) {
             var target = event.target;
             var data = $(target).attr("data");
@@ -108,22 +108,22 @@ function layoutWorkPanel() {
         return parseInt(pxValue.match(pattern)[0]);
     };
     //Add margins to work panel, but not the last one of each row.
-    $(".works_panel_wrapper").children(".works_panel").each(function(index, item) {
+    $(".works-panel-wrapper").children(".works-panel").each(function(index, item) {
         if( (index+1) % 4 != 0 ) {
             $(item).addClass("works_panel_margin");
         }
     });
     //Add slide animation to preview image light box controls.
-    $(".work_content_wrapper div.preview_img_wrapper").hover(function(event) {
-        $(this).find("div.img_lightbox_controls").slideDown("fast");
+    $(".work-content-wrapper div.preview-img-wrapper").hover(function(event) {
+        $(this).find("div.img-lightbox-controls").slideDown("fast");
     }, function(event) {
-        $(this).find("div.img_lightbox_controls").slideUp("fast");
+        $(this).find("div.img-lightbox-controls").slideUp("fast");
     });
     //convert the more content link to a relief button.
     $(".more_content_button_wrapper").convertToButton();
     //Apply FancyBox to light box controls
     //This version have bug, so, make sure have helpers property like this.
-    $(".zoom_in_tool").fancybox({
+    $(".zoom-in-tool").fancybox({
         "closeClick": true,
         "helpers": {
             "overlay": {
@@ -136,9 +136,9 @@ function layoutWorkPanel() {
 
     var maxWords = 16;
     //trim the long title to fit the size of work panel
-    var workTitleWidth = $(".work_title").width();
+    var workTitleWidth = $(".work-title").width();
     
-    $(".work_title a").ellipsis({"width":workTitleWidth, "useContainerPadding": true, "useContainerMargin": false});
+    $(".work-title a").ellipsis({"width":workTitleWidth, "useContainerPadding": true, "useContainerMargin": false});
 
     $(".category_paginater").paginator({
         "totalItems": 500,
@@ -173,7 +173,7 @@ function layoutWorkPanel() {
     
 
     //convert tags
-    $(".work_tags, #tags_selector_for_pop, #tags_selector_for_new").convertToTags({
+    $(".work-tags, #tags-selector-for-pop, #tags-selector-for-new").convertToTags({
         "click":function(tag_frame, event){
             var data = tag_frame.attr("data");
             console.log(data);

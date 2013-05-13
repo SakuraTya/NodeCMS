@@ -1,0 +1,318 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/detail.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.ultrawidget-1.0.css">
+        <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.lavalamp-1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ultrawidget-1.0.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/detail.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var global_StartItem = 1; //this javascript variable need to convert to php variable.
+                navMenuBuilding(global_StartItem);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header-bar">
+            <div id="header-wrapper">
+                <div id="logo">
+                </div>
+                <div id="user-container-wrapper"></div>
+            </div>
+        </div>
+        <div id="nav-menu-wrapper">
+            <ul id="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/themes">系统主题</a></li>
+                <li><a href="/skins">软件皮肤</a></li>
+                <li><a href="/icons-and-cursors">图标&amp;光标</a></li>
+                <li><a href="/paintings">绘画作品</a></li>
+            </ul>
+            <div style="clear:both;display:block"></div>
+        </div>
+        <div class="main-content-wrapper">
+            <div id="cpl-header" class="group-header-bg">
+                <div id="cpl-user-name" class="title-wrapper">
+                    <div class="title-wrapper-left"></div>
+                    <div class="title-content"><span>星月战隼</span></div>
+                    <div class="title-wrapper-right"></div>
+                </div>
+            </div>
+            <div id="user-avatar">
+                <img src="img/avatar-big.jpg" />
+            </div>
+            <div id="user-info">
+                <div id="simple-user-info">
+                    <div class="tiny-bubble-title">
+                        <span>加入时间</span>
+                    </div>
+                    <span class="user-info-content">2012年7月11日</span>
+                    <div class="tiny-bubble-title">
+                        <span>作品数</span>
+                    </div>
+                    <span class="user-info-content">100</span>
+                </div>
+                <div id="extend-user-info">
+                    <div class="tiny-bubble-title"><span>社交应用</span></div>
+                    <ul id="user-sns-link">
+                        <li><a href="http://twitter.com" title="twitter" class="sns-icon twitter"></a></li>
+                        <li><a href="http://www.facebook.com" title="facebook" class="sns-icon facebook"></a></li>
+                        <li><a href="http://www.foursquare.com" title="foursquare" class="sns-icon foursquare"></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="user-signature-wrapper">
+                <div id="signature"><span>这个世界上没有奇迹，有的只是必然和偶然，还有谁做了什么……</span></div>
+                <div id="signature-label"></div>
+            </div>
+
+            <div id="user-works">
+                <div class="works-panel">
+                    <div class="work-content-wrapper">
+                        <div class="preview-img-wrapper">
+                            <a href="api/work_id_001">
+                                <img src="img/prev1.jpg" />
+                            </a>
+                            <div class="img-lightbox-controls">
+                                <a href="img/prev2_big.jpg" class="zoom-in-tool"></a>
+                            </div>
+                        </div>
+                        <div class="work-title">
+                            <a href="api/work_id_001" title="少女病Grow 愿希望的光芒与你相伴">
+                                少女病Grow 愿希望的光芒与你相伴
+                            </a>
+                        </div>
+                        <div class="work-author">
+                            <span>by</span>
+                            <a href="api/author_id_001">
+                                Seiren
+                            </a>
+                        </div>
+                        <div class="work-tags">
+                            <!-- data attribute in li element is tagID, the text is tagName -->
+                            <ul>
+                                <li data="0000">Windows 7</li>
+                                <li data="0002">Grow</li>
+                                <li data="0210">少女病</li>
+                                <div style="clear:both;display:block;"></div>
+                            </ul>
+                        </div>
+                        <div class="work-panel-divider"></div>
+                        <div class="statistics-show-wrapper">
+                            <div class="statistics-downloads-wrapper" title="11020次下载">
+                                <div class="downloads-icon"></div>
+                                <span>11020</span>
+                            </div>
+                            <div class="statistics-comments-wrapper" title="3501条评论">
+                                <div class="comments-icon"></div>
+                                <span>3501</span>
+                            </div>
+                            <div class="statistics-favorites-wrapper" title="200次收藏">
+                                <div class="favorites-icon"></div>
+                                <span>200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-special-indicator"></div>
+                </div>
+
+                <!-- work_id_002 demo only. you should generate this part by server-side code-->
+                <div class="works-panel">
+                    <div class="work-content-wrapper">
+                        <div class="preview-img-wrapper">
+                            <a href="api/work_id_002">
+                                <img src="img/prev2.jpg" />
+                            </a>
+                            <div class="img-lightbox-controls">
+                                <a href="img/prev2_big.jpg"  class="zoom-in-tool"></a>
+                            </div>
+                        </div>
+                        <div class="work-title">
+                            <a href="api/work_id_002" title="缘之空穹妹主题">
+                                缘之空穹妹主题
+                            </a>
+                        </div>
+                        <div class="work-author">
+                            <span>by</span>
+                            <a href="api/author_id_002">
+                                lordfriend
+                            </a>
+                        </div>
+                        <div class="work-tags">
+                            <!-- data attribute in li element is tagID, the text is tagName -->
+                            <ul>
+                                <li data="0000">Windows 7</li>
+                                <li data="0012">缘之空</li>
+                                <li data="0212">穹妹</li>
+                                <li data="0207">直角主题</li>
+                                <div style="clear:both;display:block;"></div>
+                            </ul>
+                        </div>
+                        <div class="work-panel-divider"></div>
+                        <div class="statistics-show-wrapper">
+                            <div class="statistics-downloads-wrapper" title="10201次下载">
+                                <div class="downloads-icon"></div>
+                                <span>10201</span>
+                            </div>
+                            <div class="statistics-comments-wrapper" title="3022条评论">
+                                <div class="comments-icon"></div>
+                                <span>3022</span>
+                            </div>
+                            <div class="statistics-favorites-wrapper" title="189次收藏">
+                                <div class="favorites-icon"></div>
+                                <span>189</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-special-indicator"></div>
+                </div>
+                <!-- work_id_003 demo only. you should generate this part by server-side code-->
+                <div class="works-panel">
+                    <div class="work-content-wrapper">
+                        <div class="preview-img-wrapper">
+                            <a href="api/work_id_003">
+                                <img src="img/prev3.jpg" />
+                            </a>
+                            <div class="img-lightbox-controls">
+                                <a href="img/prev2_big.jpg"  class="zoom-in-tool"></a>
+                            </div>
+                        </div>
+                        <div class="work-title">
+                            <a href="api/work_id_003" title="Mac OS X Lion for Win7">
+                                Mac OS X Lion for Win7
+                            </a>
+                        </div>
+                        <div class="work-author">
+                            <span>by</span>
+                            <a href="api/author_id_003">
+                                bodik87
+                            </a>
+                        </div>
+                        <div class="work-tags">
+                            <!-- data attribute in li element is tagID, the text is tagName -->
+                            <ul>
+                                <li data="0000">Windows 7</li>
+                                <li data="0012">美化</li>
+                                <li data="0212">Lion</li>
+                                <li data="0207">Mac OS X</li>
+                                <div style="clear:both;display:block;"></div>
+                            </ul>
+                        </div>
+                        <div class="work-panel-divider"></div>
+                        <div class="statistics-show-wrapper">
+                            <div class="statistics-downloads-wrapper" title="10201次下载">
+                                <div class="downloads-icon"></div>
+                                <span>10201</span>
+                            </div>
+                            <div class="statistics-comments-wrapper" title="3022条评论">
+                                <div class="comments-icon"></div>
+                                <span>3022</span>
+                            </div>
+                            <div class="statistics-favorites-wrapper" title="189次收藏">
+                                <div class="favorites-icon"></div>
+                                <span>189</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-special-indicator"></div>
+                </div>
+                <!-- work_id_004 demo only. you should generate this part by server-side code-->
+                <div class="works-panel">
+                    <div class="work-content-wrapper">
+                        <div class="preview-img-wrapper">
+                            <a href="api/work_id_004">
+                                <img src="img/prev4.jpg" />
+                            </a>
+                            <div class="img-lightbox-controls">
+                                <a href="img/prev2_big.jpg"  class="zoom-in-tool"></a>
+                            </div>
+                        </div>
+                        <div class="work-title">
+                            <a href="api/work_id_004" title="華桜の巫女—博麗靈夢Win7">
+                                華桜の巫女—博麗靈夢Win7...
+                            </a>
+                        </div>
+                        <div class="work-author">
+                            <span>by</span>
+                            <a href="api/author_id_004">
+                                天翔の红牛
+                            </a>
+                        </div>
+                        <div class="work-tags">
+                            <!-- data attribute in li element is tagID, the text is tagName -->
+                            <ul>
+                                <li data="0000">Windows 7</li>
+                                <li data="0012">美化</li>
+                                <li data="0212">Lion</li>
+                                <li data="0207">Mac OS X</li>
+                                <div style="clear:both;display:block;"></div>
+                            </ul>
+                        </div>
+                        <div class="work-panel-divider"></div>
+                        <div class="statistics-show-wrapper">
+                            <div class="statistics-downloads-wrapper" title="10201次下载">
+                                <div class="downloads-icon"></div>
+                                <span>10201</span>
+                            </div>
+                            <div class="statistics-comments-wrapper" title="3022条评论">
+                                <div class="comments-icon"></div>
+                                <span>3022</span>
+                            </div>
+                            <div class="statistics-favorites-wrapper" title="189次收藏">
+                                <div class="favorites-icon"></div>
+                                <span>189</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-special-indicator"></div>
+                </div>
+                <div style="clear:both;display:block;"></div>
+                <!-- this is the paginator container do not remove -->
+                <div class="category-paginater">
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div id="footer-bar">
+            <div id="nav-links-area">
+                <ul id="about-us-list">
+                    <li class="list-title">关于我们</li>
+                    <li><a href="">关于樱茶</a></li>
+                    <li><a href="">关于樱茶幻萌组</a></li>
+                    <li><a href="">加入樱茶</a></li>
+                    <li><a href="">版权投诉</a></li>
+                </ul>
+                <ul id="user-help-list">
+                    <li class="list-title">使用帮助</li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">发布作品指南</a></li>
+                    <li><a href="">站点地图</a></li>
+                    <li><a href="">社区守则</a></li>
+                </ul>
+                <ul id="blog-update">
+                    <li class="list-title">樱茶blog</li>
+                </ul>
+                <ul id="sns-link">
+                    <li class="list-title">关注樱茶</li>
+                    <li style="background:url('img/icon_twitter.png') no-repeat;line-height:18px;"><a href="">Twitter</a></li>
+                    <li style="background:url('img/icon_gplus.png') no-repeat;line-height:18px;"><a href="">Google+</a></li>
+                    <li style="background:url('img/icon_weibo.png') no-repeat;line-height:18px;"><a href="">新浪微博</a></li>
+                    <li style="background:url('img/icon_qweibo.png') no-repeat;line-height:18px;"><a href="">腾讯微博</a></li>
+                </ul>
+                <div style="clear:both;display:block;"></div>
+            </div>
+            <div id="copyright-info">© SakuraTya 2012 All Rights Received.</div>
+        </div>
+    </body>
+</html>

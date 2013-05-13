@@ -587,7 +587,7 @@
             "horizontalSpacing": "6px",
             "enterEffect": null,
             "eraseEffect": null,
-            "loadOnScroll": true, // If set to true, the onDataLoading is invoked when scroll to the ".gridlist_load_more" element.
+            "loadOnScroll": true, // If set to true, the onDataLoading is invoked when scroll to the ".gridlist-load-more" element.
             "maxLoadTimes": 4, // Use to limit the auto load when scrolling. only works when loadOnScroll is true.
             "maxDelay": 800, // Define the max delay when the last child is performing its animation.
             "loadMoreIndicator": null, //An area or button in the end of the list. Can be a jQuery object or an function.
@@ -656,7 +656,7 @@
                     return;
                 }
                 // Detach the load more indicator temporarily
-                var loadMoreIndicator = this.children(".gridlist_load_more").detach();
+                var loadMoreIndicator = this.children(".gridlist-load-more").detach();
 
                 var count = this.adapter.getCount();
                 if(startPosition >= count || startPosition < 0) {
@@ -691,7 +691,7 @@
                     } else if(params.loadMoreIndicator && params.loadMoreIndicator.jquery) {
                         loadMoreIndicator = params.loadMoreIndicator;
                     } else {
-                        loadMoreIndicator = $("<div>").addClass("gridlist_load_more");
+                        loadMoreIndicator = $("<div>").addClass("gridlist-load-more");
                     }
                 }
                 loadMoreIndicator.appendTo(this);
@@ -798,7 +798,7 @@
 
         var onListScroll = function(event) {
             var rootView = event.data.rootView;
-            var loadMoreIndicator = rootView.children(".gridlist_load_more");
+            var loadMoreIndicator = rootView.children(".gridlist-load-more");
             if(loadMoreIndicator.length==0) {
                 return false;
             }
