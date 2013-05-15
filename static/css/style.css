@@ -44,6 +44,7 @@ a:hover {
     margin: 0 auto 0 auto;
     width: 1026px;
     height: 100%;
+    position: relative;
 }
 
 #logo{
@@ -177,6 +178,73 @@ div.group-header-bg {
 
 #user-container-wrapper {
     position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 14px;
+    background-color: #734760;
+    border: 1px solid #8c687d;
+    -webkit-border-radius: 2px; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -moz-border-radius: 12px; /* Firefox 1-3.6 */
+    border-radius: 2px; /* W3C */
+    -moz-box-shadow: 0 0 5px 0 #000000;
+    -webkit-box-shadow: 0 0 5px 0 #000000;
+    box-shadow: 0 0 5px 0 #000000;
+    min-width: 134px;
+}
+
+#user-name-link {
+    font-size: 1em;
+    color: #ffffff;
+    display: block;
+    float: left;
+    margin: 4px 18px 8px 30px;
+    min-width: 5em;
+}
+
+#extend-panel-arrow {
+    display: block;
+    width: 11px;
+    height: 7px;
+    background: url("../img/spirite.png") no-repeat;
+    background-position: -291px 0;
+    float: right;
+    margin-top: 12px;
+    margin-right: 9px;
+}
+
+#user-expand-panel {
+    clear: both;
+    width: 100%;
+}
+
+#user-small-avatar-frame {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 4px 8px 8px 8px;
+    border: 1px solid #FFFFFF;
+    -moz-box-shadow: 0 0 5px 0 #333333;
+    -webkit-box-shadow: 0 0 5px 0 #333333;
+    box-shadow: 0 0 5px 0 #333333;
+}
+
+#user-small-avatar {
+    width: 100%;
+    height: 100%;
+}
+
+#account-setting-link {
+    font-size: 0.786em;
+    color: #FFFFFF;
+    display: block;
+    margin: 8px 18px 4px 8px;
+}
+
+#enter-favorites-link {
+    font-size: 0.786em;
+    color: #FFFFFF;
+    display: block;
 }
 
 .fancybox_fix_width {
