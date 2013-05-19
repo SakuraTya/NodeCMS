@@ -1,12 +1,12 @@
 function navMenuBuilding(currentItem) {
-    $("#nav_menu").lavaLamp({
+    $("#nav-menu").lavaLamp({
         "speed": 300,
         "click": function() {
 
         },
         "startItem": currentItem,
         "returnStart": function(homeElement) {
-            $("#nav_menu").children().each(function() {
+            $("#nav-menu").children().each(function() {
                 if(!$(this).hasClass("selectedLava")) {
                     $(this).children().removeClass("hot");
                 }
@@ -20,7 +20,7 @@ function navMenuBuilding(currentItem) {
             if(hoverElement != null && hoverElement.hasClass("selectedLava")) {
                 return;
             }
-            $("#nav_menu").children().each(function() {
+            $("#nav-menu").children().each(function() {
                 $(this).children().removeClass("hot");
             })
         },
@@ -29,7 +29,7 @@ function navMenuBuilding(currentItem) {
             hoverAnchor.addClass("hot");
         }
     });
-    $("#nav_menu").children().each(function() {
+    $("#nav-menu").children().each(function() {
         var listElement = $(this);
         if(listElement.hasClass("selectedLava")) {
             listElement.children().addClass("hot");
@@ -52,7 +52,7 @@ function buildList(page) {
                     return buildWorkPanel(item);
                 }
             };
-            var gridList = $("#new_works_show .works_panel_wrapper").gridList({
+            var gridList = $("#new-works-show .works-panel-wrapper").gridList({
                 "loadMoreIndicator":createDefaultLoadMoreIndicator,
                 "onLayoutComplete": onLayoutComplete,
                 "onDataLoading": function(){
@@ -69,18 +69,18 @@ function buildList(page) {
 function buildWorkPanel(item) {
     var view = $("<div>").attr({
         "id": "work_id_" + item.id,
-        "class": "works_panel"
+        "class": "works-panel"
     });
-    var work_content_wrapper = $("<div>").addClass("work_content_wrapper").appendTo(view);
+    var work_content_wrapper = $("<div>").addClass("work-content-wrapper").appendTo(view);
 
     var zoom_in_tool = $("<a>").attr({
         "href": item.preview_big,
         "class": "zoom_in_tool"
     });
     //build img_light_controls
-    var img_lightbox_controls = $("<div>").addClass("img_lightbox_controls").append(zoom_in_tool);
-    //build preview_img_wrapper
-    var preview_img_wrapper = $("<div>").addClass("preview_img_wrapper").append(
+    var img_lightbox_controls = $("<div>").addClass("img-lightbox-controls").append(zoom_in_tool);
+    //build preview-img-wrapper
+    var preview_img_wrapper = $("<div>").addClass("preview-img-wrapper").append(
     $("<a>").attr("href", item.url).append(
     $("<img>").attr("src", item.preview))).append(img_lightbox_controls).appendTo(work_content_wrapper);
     //Add slide animation to preview image light box controls.
@@ -106,15 +106,15 @@ function buildWorkPanel(item) {
         "href": item.url,
         "title": item.title
     }).html(item.title);
-    //build work_title
-    $("<div>").addClass("work_title").append(work_title_anchor).appendTo(work_content_wrapper);
+    //build work-title
+    $("<div>").addClass("work-title").append(work_title_anchor).appendTo(work_content_wrapper);
 
-    //build work_author
-    $("<div>").addClass("work_author").append(
+    //build work-author
+    $("<div>").addClass("work-author").append(
     $("<span>").html("by")).append(
     $("<a>").attr("href", item.author.url).html(item.author.name)).appendTo(work_content_wrapper);
-    //build work_tags
-    $("<div>").addClass("work_tags").append(
+    //build work-tags
+    $("<div>").addClass("work-tags").append(
     $("<ul>").append(
 
     function(index, html) {
@@ -129,27 +129,27 @@ function buildWorkPanel(item) {
         }
     });
 
-    $("<div>").addClass("work_panel_divider").appendTo(work_content_wrapper);
-    $("<div>").addClass("statistics_show_wrapper").append(
+    $("<div>").addClass("work-panel-divider").appendTo(work_content_wrapper);
+    $("<div>").addClass("statistics-show-wrapper").append(
     $("<div>").attr({
-        "class": "statistics_downloads_wrapper",
+        "class": "statistics-downloads-wrapper",
         "title": item.downloads + "次下载"
     }).append(
-    $("<div>").addClass("downloads_icon")).append(
+    $("<div>").addClass("downloads-icon")).append(
     $("<span>").html(item.downloads))).append(
     $("<div>").attr({
-        "class": "statistics_comments_wrapper",
+        "class": "statistics-comments-wrapper",
         "title": item.comments + "条评论"
     }).append(
-    $("<div>").addClass("comments_icon")).append(
+    $("<div>").addClass("comments-icon")).append(
     $("<span>").html(item.comments))).append(
     $("<div>").attr({
-        "class": "statistics_favorites_wrapper",
+        "class": "statistics-favorites-wrapper",
         "title": item.favorites + "次收藏"
     }).append(
-    $("<div>").addClass("favorites_icon")).append(
+    $("<div>").addClass("favorites-icon")).append(
     $("<span>").html(item.favorites))).appendTo(work_content_wrapper);
-    $("<div>").addClass("work_special_indicator").appendTo(view);
+    $("<div>").addClass("work-special-indicator").appendTo(view);
 
     return view;
 }
@@ -158,7 +158,7 @@ function buildWorkPanel(item) {
  * Create a default load more indicator according to the params.loadOnScroll
  */
 function createDefaultLoadMoreIndicator(gridList) {
-    var loadMoreIndicator = $("<div>").addClass("gridlist_load_more");
+    var loadMoreIndicator = $("<div>").addClass("gridlist-load-more");
     
     loadMoreIndicator.addClass("default_loadmoreIndicator");
     var loadMoreWrapper = $("<div>").addClass("load_more_wrapper");
@@ -208,10 +208,10 @@ function createDefaultLoadMoreIndicator(gridList) {
 
 function loadData(page, adapter, gridList) {
     gridList.isLoadingData = true;
-    var loadMoreText = gridList.find(".gridlist_load_more .load_more_text");
-    var loadMoreLoading = gridList.find(".gridlist_load_more .load_more_loading");
-    var loadMoreButton = gridList.find(".gridlist_load_more .load_more_button");
-    var loadMoreOverlay = gridList.find(".gridlist_load_more .load_more_overlay");
+    var loadMoreText = gridList.find(".gridlist-load-more .load_more_text");
+    var loadMoreLoading = gridList.find(".gridlist-load-more .load_more_loading");
+    var loadMoreButton = gridList.find(".gridlist-load-more .load_more_button");
+    var loadMoreOverlay = gridList.find(".gridlist-load-more .load_more_overlay");
     loadMoreText.css("display", "none");
     loadMoreLoading.css("display", "block");
     loadMoreButton.css("display", "none");
@@ -237,10 +237,10 @@ function loadData(page, adapter, gridList) {
 }
 
 function restLoadMoreIndicator (gridList, loadMoreIndicator) {
-    var loadMoreText = gridList.find(".gridlist_load_more .load_more_text");
-    var loadMoreLoading = gridList.find(".gridlist_load_more .load_more_loading");
-    var loadMoreButton = gridList.find(".gridlist_load_more .load_more_button");
-    var loadMoreOverlay = gridList.find(".gridlist_load_more .load_more_overlay");
+    var loadMoreText = gridList.find(".gridlist-load-more .load_more_text");
+    var loadMoreLoading = gridList.find(".gridlist-load-more .load_more_loading");
+    var loadMoreButton = gridList.find(".gridlist-load-more .load_more_button");
+    var loadMoreOverlay = gridList.find(".gridlist-load-more .load_more_overlay");
     loadMoreOverlay.clearQueue();
     loadMoreOverlay.stop();
     loadMoreButton.css("display", "block");
@@ -255,7 +255,7 @@ function restLoadMoreIndicator (gridList, loadMoreIndicator) {
 }
 
 function onLayoutComplete(gridList, startPosition) {
-    var loadMoreIndicator = gridList.children(".gridlist_load_more");
+    var loadMoreIndicator = gridList.children(".gridlist-load-more");
     var loadMoreOverlay = loadMoreIndicator.find(".load_more_overlay");
     if(gridList.originalTop === 0) {
         gridList.originalTop = $.getInt(loadMoreOverlay.css("top"));
@@ -265,9 +265,9 @@ function onLayoutComplete(gridList, startPosition) {
         restLoadMoreIndicator(gridList);
     }
     //trim the long title to fit the size of work panel
-    var workTitleWidth = gridList.find(".work_title").width();
+    var workTitleWidth = gridList.find(".work-title").width();
 
-    gridList.find(".work_title a:not(:lt("+ startPosition+ "))").ellipsis({
+    gridList.find(".work-title a:not(:lt("+ startPosition+ "))").ellipsis({
         "width": workTitleWidth,
         "useContainerPadding": true,
         "useContainerMargin": false

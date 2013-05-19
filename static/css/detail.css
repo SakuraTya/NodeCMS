@@ -1,5 +1,5 @@
-.main_content_wrapper {
-    margin: 0px auto 0px auto;
+.main-content-wrapper {
+    margin: 0 auto 0 auto;
     width: 1026px;
 }
 
@@ -8,27 +8,27 @@
     float: left;
 }
 
-.title_wrapper {
+.title-wrapper {
     left: 18px;
     top: -8px;
     position: relative;
     float: left;
 }
 
-.title_wrapper_left {
+.title-wrapper-left {
     width: 11px;
     height: 40px;
     background: url("../img/tip-left.png") no-repeat;
     float: left;
 }
 
-.title_content {
+.title-content {
     height: 40px;
     background: url("../img/tip-bg.png") repeat-x;
     float: left;
 }
 
-.title_content span {
+.title-content span {
     line-height: 40px;
     color: #ffffff;
     font-family: "黑体", Verdana;
@@ -37,20 +37,20 @@
     padding-right: 13px;
 }
 
-.title_wrapper_right {
+.title-wrapper-right {
     width: 11px;
     height: 40px;
     background: url("../img/tip-right.png") no-repeat;
     float: left;
 }
 
-.detail_properties_link {
+.detail-properties-link {
     height: 30px;
     border-left: 1px solid #dfdfdf;
     float: left;
 }
 
-.detail_properties_link a {
+.detail-properties-link a {
     display: inline-block;
     padding-left: 19px;
     padding-right: 21px;
@@ -62,22 +62,22 @@
     white-space: nowrap;
 }
 
-.detail_properties_link a:hover {
+.detail-properties-link a:hover {
     display: inline-block;
     background: #f6f6f6;
 }
 
-#detail_category {
+#detail-category {
     margin-left: 26px;
 }
 
-#detail_subcategory {
+#detail-subcategory {
     border-right: 1px solid #dfdfdf;
 }
 /**
- * work_content_wrapper is the left area under navigation bar which contains the article and comments. its right is work_info_wrapper.
+ * work-content-wrapper is the left area under navigation bar which contains the article and comments. its right is work-info-wrapper.
  */
-#work_content_wrapper {
+#work-content-wrapper {
     width: 774px;
     float: left;
 }
@@ -96,40 +96,40 @@
     margin-top: 28px;
 }
 
-#comments_title {
+#comments-title {
     font-size: 1em;
     font-family: "黑体",sans-serif;
     color: #848484;
     border-bottom: 1px solid #d9d9d9;
     width: 100%;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
 }
 
-#comments_title span {
-    padding: 0px 8px 0px 8px;
+#comments-title span {
+    padding: 0 8px 0 8px;
 }
 
 .commentlist {
     width: 100%;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #d9d9d9;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style-type: none;;
 }
 
-li.depth_1 {
+li.depth-1 {
     margin: 70px 5px 36px 5px;
     padding: 5px 8px 5px 8px;
     display: block;
     position: relative;
     background-color: #ffffff;
-    -moz-box-shadow:    3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    box-shadow:         3px 5px 5px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow:    3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    box-shadow:         3px 5px 5px 0 rgba(0, 0, 0, 0.18);
 }
 
-li.depth_1:after  {
+li.depth-1:after  {
     background: url("../img/spirite.png") no-repeat;
     background-position: -310px -49px;
     width: 31px;
@@ -145,19 +145,19 @@ li.depth_1:after  {
 }
 
 
-.comment_meta {
+.comment-meta {
     position: absolute;
     top: -63px;
 }
 
-.comment_author_avatar {
+.comment-author-avatar {
     width: 48px;
     height: 48px;
     background: #ffffff;
     display: block;
 }
 
-.comment_author_avatar img {
+.comment-author-avatar img {
     width: 42px;
     height: 42px;
     margin-left: 3px;
@@ -165,7 +165,7 @@ li.depth_1:after  {
     border: none;
 }
 
-.comment_author_name {
+.comment-author-name {
     display: block;
     position: absolute;
     left: 59px;
@@ -173,27 +173,27 @@ li.depth_1:after  {
     font-size: 1em;
 }
 
-.comment_timestamp {
+.comment-timestamp {
     position: relative;
     top: -21px;
     left: 59px;
     font-size: 0.79em;
 }
 
-.comment_timestamp span {
+.comment-timestamp span {
     color: #5e5e5e;
 }
 
-.comment_content {
+.comment-content {
     font-size: 1em;
     color: #5e5e5e;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
-.comment_content p {
+.comment-content p {
     line-height: 1.5em;
-    margin: 0px;
+    margin: 0;
 }
 
 .reply {
@@ -203,7 +203,7 @@ li.depth_1:after  {
     margin-right: 9px;
 }
 
-.reply_icon {
+.reply-icon {
     margin-top: 2px;
     margin-right: 2px;
     display: block;
@@ -221,13 +221,13 @@ li.depth_1:after  {
     float: left;
 }
 
-.edit_link {
+.edit-link {
     float:left;
     cursor: pointer;
     line-height: 0.8em;
 }
 
-.edit_icon {
+.edit-icon {
     margin-top: 1px;
     margin-right: 2px;
     display: block;
@@ -238,7 +238,7 @@ li.depth_1:after  {
     background-position: -324px -36px;
 }
 
-.edit_link span {
+.edit-link span {
     font-size: 0.86em;
     color:#bbbbbb;
     display: block;
@@ -249,9 +249,9 @@ ul.children {
     list-style-type: none;
 }
 
-.depth_1 ul.children {
-    padding: 0px;
-    margin: 0px;
+.depth-1 ul.children {
+    padding: 0;
+    margin: 0;
 }
 
 .children li {
@@ -261,18 +261,18 @@ ul.children {
     border-top: 1px solid #d9d9d9;
 }
 
-.children .comment_meta {
+.children .comment-meta {
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     float: left;
 }
 
-.children .comment_author {
+.children .comment-author {
     float: left;
 }
 
-.children .comment_author_avatar {
+.children .comment-author-avatar {
     width: 44px;
     height: 44px;
     position: absolute;
@@ -281,7 +281,7 @@ ul.children {
     background: #d9d9d9;
 }
 
-.children .comment_author_avatar img {
+.children .comment-author-avatar img {
     width: 42px;
     height: 42px;
     margin-top: 1px;
@@ -289,24 +289,24 @@ ul.children {
     border: none;
 }
 
-.children .comment_author_name {
+.children .comment-author-name {
     font-size: 0.86em;
     position: static;
     float: left;
 }
 
-.comment_conversation {
+.comment-conversation {
     float: left;
     margin-left: 10px;
     font-size: 0.79px;
     padding-top: 2px;
 }
 
-.comment_conversation span {
+.comment-conversation span {
     color: #5e5e5e;
 }
 
-.children .comment_timestamp {
+.children .comment-timestamp {
     position: static;
     float: left;
     clear: right;
@@ -314,7 +314,7 @@ ul.children {
     padding-top: 2px;
 }
 
-.children .comment_content {
+.children .comment-content {
     clear:both;
     padding-top: 5px;
 }
@@ -324,13 +324,13 @@ ul.children {
     margin-top: 14px;
 }
 
-#respond .respond_account {
+#respond .respond-account {
     margin-left: 15px;
     display: block;
     float: left;
 }
 
-#respond .respond_avatar {
+#respond .respond-avatar {
     width: 48px;
     height: 48px;
     display: block;
@@ -339,7 +339,7 @@ ul.children {
     float: left;
 }
 
-#respond .respond_avatar img {
+#respond .respond-avatar img {
     width: 42px;
     height: 42px;
     margin-left: 3px;
@@ -347,7 +347,7 @@ ul.children {
     border: none;
 }
 
-#respond .respond_name {
+#respond .respond-name {
     display: block;
     float: left;
     font-size: 1em;
@@ -355,7 +355,7 @@ ul.children {
     margin-top: 8px;
 }
 
-#respond .respond_tips {
+#respond .respond-tips {
     font-size: 0.79em;
     color: #969696;
     display: block;
@@ -364,7 +364,7 @@ ul.children {
     padding: 10px;
 }
 
-#compose_comment {
+#compose-comment {
     width: 673px;
     height: auto;
     background: #ffffff;
@@ -374,10 +374,10 @@ ul.children {
     position: relative;
     top: -3px;
     left: 78px;
-    padding: 0px;
+    padding: 0;
 }
 
-#compose_comment:after {
+#compose-comment:after {
     position: absolute;
     top: -8px;
     left: -10px;
@@ -398,7 +398,7 @@ ul.children {
     resize: vertical;
 }
 
-#comment_submit {
+#comment-submit {
     width: 95px;
     height: 27px;
     margin-right: 28px;
@@ -409,20 +409,20 @@ ul.children {
     text-align: center;
     position: relative;
 }
-#comment_submit span {
+#comment-submit span {
     line-height: 27px;
 }
 
 /**
- * work_info_wrapper is the right area which shows work info such as author, tag, download button etc.
+ * work-info-wrapper is the right area which shows work info such as author, tag, download button etc.
   */
-#work_info_wrapper {
+#work-info-wrapper {
     width: 240px;
     float:left;
     margin-left: 9px;
 }
 
-#author_avatar_wrapper {
+#author-avatar-wrapper {
     display: block;
     background: #ffffff;
     border: 1px solid #dfdfdf;
@@ -432,14 +432,14 @@ ul.children {
     margin-left: 6px;
     margin-right: 15px;
 }
-#author_avatar_wrapper img {
+#author-avatar-wrapper img {
     width: 65px;
     height: 65px;
     margin-left: 5px;
     margin-top: 5px;
     border: none;
 }
-#author_name {
+#author-name {
     float: left;
     display: block;
     width: 132px;
@@ -451,7 +451,7 @@ ul.children {
     font-size: 1.1em;
 }
 
-#author_sign {
+#author-sign {
     float: left;
     width: 132px;
     height: 42px;
@@ -459,16 +459,16 @@ ul.children {
     color: #606060;
     font-size: 0.7em;
 }
-#author_function_wrapper{
+#author-function-wrapper {
     clear: both;
     display: block;
 }
 
-.info_section_label {
-    margin: 20px 6px 0px 6px;
+.info-section-label {
+    margin: 20px 6px 0 6px;
 }
 
-.info_section_divider {
+.info-section-divider {
     clear: both;
     height: 1px;
     border-bottom: 1px solid #ffffff;
@@ -476,24 +476,24 @@ ul.children {
     width: 229px;
 }
 
-#info_label_author {
+#info-label-author {
     float: right;
     width: 85px;
     height: 15px;
     background: url("../img/spirite.png") no-repeat;
-    background-position: 0px -140px;
+    background-position: 0 -140px;
 }
 
-#project_info {
+#project-info {
     margin-top: 14px;
 }
 
-#project_brief {
+#project-brief {
     margin-left: 18px;
     margin-right: 10px;
 }
 
-#project_brief span {
+#project-brief span {
     line-height: 21px;
     display: block;
     font-size: 0.7em;
@@ -501,15 +501,15 @@ ul.children {
     font-family: "黑体", sans-serif;
 }
 
-#project_download_button {
+#project-download-button {
     width: 153px;
     height: 54px;
-    margin: 30px auto 0px 30px;
+    margin: 30px auto 0 30px;
     position: relative;
     cursor: pointer;
 }
 
-#download_icon {
+#download-icon {
     width: 29px;
     height: 25px;
     margin-top: 10px;
@@ -519,7 +519,7 @@ ul.children {
     float: left;
 }
 
-.button_title {
+.button-title {
     margin-top: 10px;
     margin-left: 10px;
     float: left;
@@ -529,7 +529,7 @@ ul.children {
     color: #8c8c8c;
 }
 
-.button_desc {
+.button-desc {
     margin-left: 10px;
     margin-top: 8px;
     float: left;
@@ -539,15 +539,15 @@ ul.children {
     color: #a0a0a0;
 }
 
-#project_favorite_button {
+#project-favorite-button {
     width: 153px;
     height: 54px;
-    margin: 30px auto 0px 30px;
+    margin: 30px auto 0 30px;
     position: relative;
     cursor: pointer;
 }
 
-#favorite_icon {
+#favorite-icon {
     width: 30px;
     height: 29px;
     margin-top: 10px;
@@ -557,7 +557,7 @@ ul.children {
     float: left;
 }
 
-#info_label_project {
+#info-label-project {
     float: right;
     width: 85px;
     height: 15px;
@@ -565,16 +565,16 @@ ul.children {
     background-position: -86px -140px;
 }
 
-#work_tags {
+#work-tags {
     margin-top: 14px;
 }
 
-#work_tags_list {
-    margin: 0px 6px 0px 12px;
-    padding: 0px;
+#work-tags-list {
+    margin: 0 6px 0 12px;
+    padding: 0;
 }
 
-#info_label_tags {
+#info-label-tags {
     float: right;
     width: 85px;
     height: 15px;
@@ -582,7 +582,7 @@ ul.children {
     background-position: -172px -140px;
 }
 
-#info_label_share {
+#info-label-share {
     float: right;
     width: 85px;
     height: 15px;
@@ -591,11 +591,11 @@ ul.children {
 }
 
 /** Control Panel's special style***/
-#cpl_header {
+#cpl-header {
     float: left;
 }
 
-#user_avatar {
+#user-avatar {
     margin: 15px 22px 13px 22px;
     width: 140px;
     height: 140px;
@@ -604,14 +604,14 @@ ul.children {
     float: left;
 }
 
-#user_avatar img {
+#user-avatar img {
     width: 128px;
     height: 128px;
     border: none;
     margin: 6px;
 }
 
-#user_signature_wrapper {
+#user-signature-wrapper {
     clear: both;
     position: relative;
     margin-left: 53px;
@@ -625,16 +625,16 @@ ul.children {
     position: absolute;
     top: 11px;
     left: 4px;
-    -moz-box-shadow:    3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    box-shadow:         3px 5px 5px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow:    3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    box-shadow:         3px 5px 5px 0 rgba(0, 0, 0, 0.18);
 }
 
 #signature span {
     line-height: 34px;
     font-size: 1em;
     color: #686868;
-    padding:0px;
+    padding:0;
     margin-left: 20px;
     margin-right: 15px;
     display: block;
@@ -650,7 +650,7 @@ ul.children {
     left: -3px;
     content: "";
 }
-#signature_label {
+#signature-label {
     width: 75px;
     height: 7px;
     background: url("../img/spirite.png") no-repeat;
@@ -660,11 +660,11 @@ ul.children {
     left: 28px;
 }
 
-#user_info {
+#user-info {
     float: left;
 }
 
-#simple_user_info {
+#simple-user-info {
     float: left;
     margin-top: 22px;
     min-width: 166px;
@@ -672,21 +672,21 @@ ul.children {
     border-right: 1px solid #dcdcdc;
 }
 
-.tiny_bubble_title {
+.tiny-bubble-title {
     background-color: #ffffff;
     width: 78px;
     height: 18px;
     display: block;
     position: relative;
-    top: 0px;
+    top: 0;
     left: 6px;
-    -moz-box-shadow:    3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.18);
-    box-shadow:         3px 5px 5px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow:    3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.18);
+    box-shadow:         3px 5px 5px 0 rgba(0, 0, 0, 0.18);
     clear:right;
 }
 
-.tiny_bubble_title:after {
+.tiny-bubble-title:after {
     width: 9px;
     height: 5px;
     display: block;
@@ -696,7 +696,7 @@ ul.children {
     left: -6px;
     content: "";
 }
-.tiny_bubble_title span {
+.tiny-bubble-title span {
     line-height: 18px;
     font-size: 0.78em;
     color: #686868;
@@ -706,7 +706,7 @@ ul.children {
     display: block;
 }
 
-span.user_info_content {
+span.user-info-content {
     line-height: 20px;
     margin: 12px 20px 18px 7px;
     display: block;
@@ -714,7 +714,7 @@ span.user_info_content {
     color: #686868;
 }
 
-#extend_user_info {
+#extend-user-info {
     min-height: 136px;
     border-left: 1px solid #ffffff;
     margin-top: 22px;
@@ -722,20 +722,20 @@ span.user_info_content {
     float: left;
 }
 
-#user_sns_link {
+#user-sns-link {
     list-style-type: none;
-    padding: 0px;
+    padding: 0;
     margin: 12px 20px 18px 7px;
     float: left;
 }
 
-#user_sns_link li {
+#user-sns-link li {
     float: left;
     display: block;
-    margin: 0px 10px 10px 0px;
+    margin: 0 10px 10px 0;
 }
 
-a.sns_icon {
+a.sns-icon {
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -752,15 +752,15 @@ a.foursquare {
     background-image: url("../img/foursquare.png");
 }
 
-#user_works {
+#user-works {
     width: 100%;
-    margin: 0px;
-    padding: 44px 0px 0px 0px;
+    margin: 0;
+    padding: 44px 0 0 0;
     border-top: 1px solid #d9d9d9;
     position: relative;
 }
 
-#user_works:before {
+#user-works:before {
     width: 100%;
     height: 1px;
     content: "";
@@ -770,13 +770,13 @@ a.foursquare {
     background-color: #ffffff
 }
 
-#user_works:after {
+#user-works:after {
     width: 100px;
     height: 29px;
     background: url("../img/spirite.png") no-repeat;
-    background-position: 0px -156px;
+    background-position: 0 -156px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     content: "";
 }

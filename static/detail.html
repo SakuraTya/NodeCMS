@@ -1,0 +1,272 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/detail.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.ultrawidget-1.0.css">
+        <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.lavalamp-1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ultrawidget-1.0.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/detail.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var global_StartItem = 1; //this javascript variable need to convert to php variable.
+                navMenuBuilding(global_StartItem);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header-bar">
+            <div id="header-wrapper">
+                <div id="logo">
+                </div>
+                <div id="user-container-wrapper"></div>
+            </div>
+        </div>
+        <div id="nav-menu-wrapper">
+            <ul id="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/themes">系统主题</a></li>
+                <li><a href="/skins">软件皮肤</a></li>
+                <li><a href="/icons-and-cursors">图标&amp;光标</a></li>
+                <li><a href="/paintings">绘画作品</a></li>
+            </ul>
+            <div style="clear:both;display:block"></div>
+        </div>
+        <div class="main-content-wrapper">
+            <div id="detail_header" class="group-header-bg">
+                <div id="detail-title" class="title-wrapper">
+                    <div class="title-wrapper-left"></div>
+                    <div class="title-content"><span>Memories Off 7 秋之回忆 7 打勾勾的回忆</span></div>
+                    <div class="title-wrapper-right"></div>
+                </div>
+                <!-- this link should be modifed according to the article's category and sub category -->
+                <div id="detail-category" class="detail-properties-link"><a href="">系统主题</a></div>
+                <div id="detail-subcategory" class="detail-properties-link"><a href="">Windows 7</a></div>
+            </div>
+            <div id="work-content-wrapper">
+                <div id="article">
+                </div>
+                <div id="comments">
+                    <div id="comments-title"><span>5条评论</span></div>
+                    <ol class="commentlist">
+                        <li class="depth-1" id="li-comment-1">
+                            <div class="comment" id="comment-1">
+                                <div class="comment-meta">
+                                    <div class="comment-author">
+                                            <a class="comment-author-avatar" href=""><img src="img/comment_avatar.jpg" /></a>
+                                        <a class="comment-author-name" href="">Bob Yuan</a>
+                                    </div>
+                                    <div class="comment-timestamp">
+                                        <span>发表于</span>
+                                        <a href="#comment-1">
+                                            <time datetime="2012-12-15T13:13:00+00:00">2012年12月15日 1:13 am</time>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="comment-content">
+                                    <p>虽不明但觉历</p>
+                                </div>
+                                <div class="reply"><div class="reply-icon"></div><span>回复</span></div>
+                                <div class="edit-link"><div class="edit-icon"></div><span>编辑</span></div>
+                                <div style="display:block;clear:both;"></div>
+                            </div>
+                            <!-- #comment_## -->
+                            <ul class="children">
+                                <li class="depth-2" id="li-comment-2">
+                                    <div class="comment" id="comment-2">
+                                        <div class="comment-meta">
+                                            <div class="comment-author">
+                                                <a class="comment-author-avatar" href=""><img src="img/comment_avatar.jpg" /></a>
+                                                <a class="comment-author-name" href="">Bob Yuan</a>
+                                            </div>
+                                            <div class="comment-conversation">
+                                                <span>对</span>
+                                                <a href="">Bob Yuan</a>
+                                                <span>的回复</span>
+                                            </div>
+                                            <div class="comment-timestamp">
+                                                <span>发表于</span>
+                                                <a href="#comment-1">
+                                                    <time datetime="2012-12-16T13:13:00+00:00">2012年12月16日 0:50 am</time>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content">
+                                            <p>这是第一层回复的回复</p>
+                                        </div>
+                                        <div class="reply"><div class="reply-icon"></div><span>回复</span></div>
+                                        <div class="edit-link"><div class="edit-icon"></div><span>编辑</span></div>
+                                        <div style="display:block;clear:both;"></div>
+                                    </div>
+                                    <!-- #comment_## -->
+                                    <ul class="children">
+                                        <li class="depth-3" id="li-comment-3">
+                                            <div class="comment" id="comment-3">
+                                                <div class="comment-meta">
+                                                    <div class="comment-author">
+                                                        <a class="comment-author-avatar" href=""><img src="img/comment_avatar.jpg" /></a>
+                                                        <a class="comment-author-name" href="">Bob Yuan</a>
+                                                    </div>
+                                                    <div class="comment-conversation">
+                                                        <span>对</span>
+                                                        <a href="">Bob Yuan</a>
+                                                        <span>的回复</span>
+                                                    </div>
+                                                    <div class="comment-timestamp">
+                                                        <span>发表于</span>
+                                                        <a href="#comment-1">
+                                                            <time datetime="2012-12-16T13:13:00+00:00">2012年12月16日 0:50 am</time>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <p>这是第2层回复的回复</p>
+                                                </div>
+                                                <div class="reply"><div class="reply-icon"></div><span>回复</span></div>
+                                                <div class="edit-link"><div class="edit-icon"></div><span>编辑</span></div>
+                                                <div style="display:block;clear:both;"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth_2" id="li_comment_4">
+                                    <div class="comment" id="comment_4">
+                                        <div class="comment-meta">
+                                            <div class="comment-author">
+                                                <a class="comment-author-avatar" href=""><img src="img/comment_avatar.jpg" /></a>
+                                                <a class="comment-author-name" href="">Bob Yuan</a>
+                                            </div>
+                                            <div class="comment-conversation">
+                                                <span>对</span>
+                                                <a href="">Bob Yuan</a>
+                                                <span>的回复</span>
+                                            </div>
+                                            <div class="comment-timestamp">
+                                                <span>发表于</span>
+                                                <a href="#comment-1">
+                                                    <time datetime="2012-12-30T18:07:00+00:00">2012年12月30日 06:07 pm</time>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="comment-content">
+                                            <p>这是第一层回复的回复</p>
+                                        </div>
+                                        <div class="reply"><div class="reply-icon"></div><span>回复</span></div>
+                                        <div class="edit-link"><div class="edit-icon"></div><span>编辑</span></div>
+                                        <div style="display:block;clear:both;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <div id="respond">
+                        <div class="respond-account">
+                            <a class="respond-avatar" href=""><img src="img/comment_avatar.jpg" /></a>
+                            <a class="respond-name" href="">Bob Yuan</a>
+                        </div>
+                        <span class="respond-tips">来说点什么吧</span>
+                        <div id="compose-comment"><textarea id="comment" name="comment" cols="45" rows="8"></textarea></div>
+                        <a href="" id="comment-submit"><span>发表评论</span></a>
+                        <div style="display:block;clear:both;"></div>
+                    </div>
+                    <!-- #respond -->
+                </div>
+                <!-- #comments -->
+            </div>
+            <div id="work-info-wrapper">
+                <div id="author-info">
+                    <!-- The href property of #author-avatar-wrapper and #author-name is both the author profile page's url -->
+                    <a id="author-avatar-wrapper" href=""><img src="img/avatar.jpg" /></a>
+                    <a id="author-name" href="">星月战隼</a>
+                    <div id="author-sign">这个世界上没有奇迹，有的只是必然和偶然，还有谁做了什么……</div>
+                    <div id="author-function-wrapper"></div>
+                    <div class="info-section-label">
+                        <div id="info-label-author"></div>
+                        <div class="info-section-divider"></div>
+                    </div>
+                </div>
+                <div id="project-info">
+                    <div id="project-brief">
+                        <span>发表于：2011年9月28日</span>
+                        <span>查看：4480</span>
+                        <span>评论：160</span>
+                    </div>
+                    <!-- This button need ajax load the real download link -->
+                    <div id="project-download-button">
+                        <div id="download-icon"></div>
+                        <span class="button-title">查看下载地址</span>
+                        <span class="button-desc">已下载3801次</span>
+                    </div>
+                    <div id="project-favorite-button">
+                        <div id="favorite-icon"></div>
+                        <span class="button-title">收藏这个作品</span>
+                        <span class="button-desc">收藏次数1080次</span>
+                    </div>
+                    <div class="info-section-label">
+                        <div id="info-label-project"></div>
+                        <div class="info-section-divider"></div>
+                    </div>
+                </div>
+                <div id="work-tags">
+                    <ul id="work-tags-list">
+                        <!-- work-tags are dynamically generated -->
+                        <li data="Memeries Off">Memeries Off</li>
+                        <li data="秋之回忆 7">秋之回忆 7</li>
+                        <li data="Galgame">Galgame</li>
+                        <div style="clear:both;display:block;"></div>
+                    </ul>
+                    <div class="info-section-label">
+                        <div id="info-label-tags"></div>
+                        <div class="info-section-divider"></div>
+                    </div>
+                </div>
+                <div id="share-buttons">
+                    <div id="share-buttons-wrapper">
+                        <!-- Place share buttons here -->
+                    </div>
+                    <div class="info-section-label">
+                        <div id="info-label-share"></div>
+                        <div class="info-section-divider"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:block;clear:both;"></div>
+        </div>
+        
+        <div id="footer-bar">
+            <div id="nav-links-area">
+                <ul id="about-us-list">
+                    <li class="list-title">关于我们</li>
+                    <li><a href="">关于樱茶</a></li>
+                    <li><a href="">关于樱茶幻萌组</a></li>
+                    <li><a href="">加入樱茶</a></li>
+                    <li><a href="">版权投诉</a></li>
+                </ul>
+                <ul id="user-help-list">
+                    <li class="list-title">使用帮助</li>
+                    <li><a href="">隐私政策</a></li>
+                    <li><a href="">发布作品指南</a></li>
+                    <li><a href="">站点地图</a></li>
+                    <li><a href="">社区守则</a></li>
+                </ul>
+                <ul id="blog-update">
+                    <li class="list-title">樱茶blog</li>
+                </ul>
+                <ul id="sns_link">
+                    <li class="list-title">关注樱茶</li>
+                    <li style="background:url('img/icon_twitter.png') no-repeat;line-height:18px;"><a href="">Twitter</a></li>
+                    <li style="background:url('img/icon_gplus.png') no-repeat;line-height:18px;"><a href="">Google+</a></li>
+                    <li style="background:url('img/icon_weibo.png') no-repeat;line-height:18px;"><a href="">新浪微博</a></li>
+                    <li style="background:url('img/icon_qweibo.png') no-repeat;line-height:18px;"><a href="">腾讯微博</a></li>
+                </ul>
+                <div style="clear:both;display:block;"></div>
+            </div>
+            <div id="copyright-info">© SakuraTya 2012 All Rights Received.</div>
+        </div>
+    </body>
+</html>
