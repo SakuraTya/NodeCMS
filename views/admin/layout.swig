@@ -4,9 +4,9 @@
 <html>
 <head>
 	<title>{% block title %}{% endblock %}</title>
-	{% block css %}
 	{{ css('css/bootstrap.min.css') }}
 	{{ css('css/bootstrap-responsive.min.css') }}
+	{% block css %}
 	{% endblock %}
 </head>
 <body>
@@ -17,10 +17,9 @@
 		<div class="span10">{% block body %}{% endblock %}</div>
 	</div>
 </div>
-
+{{ js('js/jquery-1.8.0.min.js') }}
+{{ js('js/bootstrap.min.js') }}
 {% block js %}
-	{{ js('js/jquery-1.8.0.min.js') }}
-	{{ js('js/bootstrap.min.js') }}
 {% endblock %}
 </body>
 </html>

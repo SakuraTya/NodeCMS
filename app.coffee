@@ -3,11 +3,20 @@ server_opts = {port:8088,disable_io:true}
 cons = require('consolidate')
 swig = require('swig')
 
+htmlProc = (t)->
+	return (err,html)=>
+		beautify_html = require('js-beautify').html
+		if err
+			t.next err
+			return
+		t.send beautify_html html
+
 require('zappajs').run server_opts,->
 
 	RedisStore = require('connect-redis')(@express)
 
-	@use 'bodyParser', 'cookieParser','methodOverride', @express.session(store:new RedisStore(),secret:'nya'),@app.router,'errorHandler'
+	@use 'bodyParser','cookieParser','methodOverride',@express.session(store:new RedisStore(),secret:'nya'),@app.router,'errorHandler'
+
 	@app.engine('.swig', cons.swig)
 	@app.set('view engine', 'html')
 
@@ -43,7 +52,8 @@ require('zappajs').run server_opts,->
 									name:'加大号的猫'
 								}
 							}
-						]
+						],htmlProc(@)
+
 
 
 
@@ -52,3 +62,16 @@ require('zappajs').run server_opts,->
 			is_admin:true
 			user:
 				display_name:'加大号的猫'
+		,htmlProc @
+
+
+	@get '/admin/posts/new':->
+		@render 'admin/newpost.swig',
+			is_admin:true
+			user:
+				display_name:'加大号的猫'
+		,htmlProc @
+
+
+	@get '/admin/media/image/editor_browse':->
+		@render 'admin/editor_browse.swig',null,htmlProc @
