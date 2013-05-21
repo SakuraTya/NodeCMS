@@ -186,4 +186,5 @@ $(document).ready(function(){
     dropDownTimeSelectorForPop();
     dropDownPlatformSelectorForPop();
     dropDownTagsSelectorForPop();
+    userPanelInit();
 });

@@ -274,3 +274,24 @@ function onLayoutComplete(gridList, startPosition) {
     });
     
 }
+
+function userPanelInit() {
+    var timer;
+    var userNameLink = $("#user-name-link");
+    if(userNameLink.length>0) {
+        // user panel is available
+        $("#user-container-wrapper").hover(function(event){
+            if(timer) {
+                clearTimeout(timer);
+            }
+            $("#user-expand-panel").show();
+        }, function(event){
+            timer = setTimeout(function(){
+                $("#user-expand-panel").hide();
+            }, 500);
+        });
+    } else {
+        // login panel is available
+    }
+
+}

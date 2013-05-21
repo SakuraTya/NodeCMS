@@ -215,6 +215,7 @@ div.group-header-bg {
 #user-expand-panel {
     clear: both;
     width: 100%;
+    display: none;
 }
 
 #user-small-avatar-frame {
@@ -224,9 +225,9 @@ div.group-header-bg {
     height: 30px;
     margin: 4px 8px 8px 8px;
     border: 1px solid #FFFFFF;
-    -moz-box-shadow: 0 0 5px 0 #333333;
-    -webkit-box-shadow: 0 0 5px 0 #333333;
-    box-shadow: 0 0 5px 0 #333333;
+    -moz-box-shadow: 1px 1px 5px 0 #333333;
+    -webkit-box-shadow: 1px 1px 5px 0 #333333;
+    box-shadow: 1px 1px 5px 0 #333333;
 }
 
 #user-small-avatar {
@@ -234,17 +235,20 @@ div.group-header-bg {
     height: 100%;
 }
 
-#account-setting-link {
-    font-size: 0.786em;
-    color: #FFFFFF;
+#account-setting-link-wrapper {
+    margin: 0px 18px 0px 8px;
     display: block;
-    margin: 8px 18px 4px 8px;
+    padding-top: 4px;
 }
 
-#enter-favorites-link {
+#enter-favorites-link-wrapper {
+    margin: 0px 18px 0px 8px;
+    display: block;
+}
+.user-expand-link {
     font-size: 0.786em;
     color: #FFFFFF;
-    display: block;
+    display: inline;
 }
 
 .fancybox_fix_width {
