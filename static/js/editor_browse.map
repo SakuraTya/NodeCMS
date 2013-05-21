@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "editor_browse.js",
+  "sourceRoot": "",
+  "sources": [
+    "editor_browse.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;;;;;AAQA,CARA,CAAA,CAQE,MAAA;CACD,KAAA,CAAA;;CAAA,CAAA,CAAU,IAAV,IAAU,MAAA;CACC,EAAA,MAAX,CAAA;CACC,CAAkD,EAAlD,CAA4B,CAAtB,CAAN,CAAsB,IAAtB,yBAAA;CACO,IAAP,CAAM,KAAN;CAFD,CAGC,CAHU,CAAX;CAFC"
+}
