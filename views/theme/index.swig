@@ -13,22 +13,22 @@
 {% endblock %}
 
 {% block body %}
-	<div id="popular_works_show">
-	<div id="popworks_group_header" class="group_header_bg">
-		<div id="popworks_group_label"></div>
-		<div id="search_box_for_pop">
-			<div class="search_box_wrapper">
-				<span class="search_box_icon"></span>
-				<input class="search_box_input" name="search" id="search_pop" placeholder="搜索..." type="text" />
+	<div id="popular-works-show">
+	<div id="popworks-group-header" class="group-header-bg">
+		<div id="popworks-group-label"></div>
+		<div id="search-box-for-pop">
+			<div class="search-box-wrapper">
+				<span class="search-box-icon"></span>
+				<input class="search-box-input" name="search" id="search-pop" placeholder="搜索..." type="text" />
 			</div>
 		</div>
-		<div id="tags_selector_for_pop">
+		<div id="tags-selector-for-pop">
 			<ul>
 				{% for tag in pop_tags %}<li data-id="{{ tag.id }}">{{ tag.name }}</li>{% endfor %}
 				<div style="clear:both;display:block;"></div>
 			</ul>
 		</div>
-		<div id="platform_selector_for_pop">
+		<div id="platform-selector-for-pop">
 			<ul>
 				<li data="Windows 7" class="selected">Windows 7</li>
 				<li data="Windows XP">Windows XP</li>
@@ -36,7 +36,7 @@
 				<li data="Other">Other</li>
 			</ul>
 		</div>
-		<div id="time_selector_for_pop">
+		<div id="time-selector-for-pop">
 			<ul>
 				<li data="week" class="selected">最近一周</li>
 				<li data="months">最近一个月</li>
@@ -46,16 +46,16 @@
 		</div>
 	</div>
 	<!--This is works panel area where all panels place here, a template should modify to a loop structure-->
-	<div class="works_panel_wrapper">
+	<div class="works-panel-wrapper">
 		{% for post in posts %}
 			{% include "theme/post-block.swig" with post only %}
 		{% endfor %}
 		<div style="clear:both;display:block;"></div>
 	</div>
-	<div class="page_navigator_holder">
-		<a id="pop_more_content_button" class="more_content_button_wrapper" href="/category">
+	<div class="page-navigator-holder">
+		<a id="pop-more-content-button" class="more-content-button-wrapper" href="/category">
 			<span>更多</span>
-			<div class="right_arrow_icon">
+			<div class="right-arrow-icon">
 			</div>
 		</a>
 		<div style="clear:both;display:block;"></div>

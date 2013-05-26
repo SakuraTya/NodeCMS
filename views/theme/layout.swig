@@ -3,29 +3,24 @@
 <html>
 <head>
 	<title>{% block title %}{% endblock %}</title>
-	{% block css %}
-	{{ css('css/style.css') }}
-	{{ css('css/jquery.ultrawidget-1.0.css') }}
+	{{ css('css/theme.css') }}
 	{{ css('fancybox/jquery.fancybox.css') }}
-	{% endblock %}
+	{% block css %}{% endblock %}
 </head>
 <body>
-<div id="header_bar">
-	<div id="header_wrapper">
+<div id="header-bar">
+	<div id="header-wrapper">
 		<div id="logo">
 		</div>
-		<div id="user_container_wrapper"></div>
+		<div id="user-container-wrapper"></div>
 	</div>
 </div>
 {% include 'theme/navbar.swig' %}
 {% block body %}{% endblock %}
-{% block js %}
-{{ js('js/jquery-1.8.0.min.js') }}
-{{ js('js/jquery.lavalamp-1.4.min.js') }}
-{{ js('js/jquery.ultrawidget-1.0.js') }}
-{{ js('js/jquery.fancybox.pack.js') }}
+{{js('js/theme.js')}}
 {{ js('js/core.js') }}
-{% endblock %}
+{{ js('js/jquery.ultrawidget-1.0.js') }}
+{% block js %}{% endblock %}
 <script type="text/javascript">
 	$(document).ready(function() {
 		var global_StartItem = {{ nav_index }}; //this javascript variable need to convert to php variable.

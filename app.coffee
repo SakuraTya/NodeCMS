@@ -12,7 +12,6 @@ htmlProc = (t)->
 		t.send beautify_html html
 
 require('zappajs').run server_opts,->
-
 	RedisStore = require('connect-redis')(@express)
 
 	@use 'bodyParser','cookieParser','methodOverride',@express.session(store:new RedisStore(),secret:'nya'),@app.router,'errorHandler'
@@ -21,38 +20,38 @@ require('zappajs').run server_opts,->
 	@app.set('view engine', 'html')
 
 	swig.init({
-						root: './views/',
-						allowErrors: true,
-						cache:false
+		root: './views/',
+		allowErrors: true,
+		cache:false
 	})
 
 	@app.set('views','./views/')
 	@get '/': ->
 		@render 'theme/index.swig',
-						nav_index:0
-						pop_tags:[
-							{name:'新番',id:'aDr'}
-							{name:'直角',id:'aDC'}
-						]
-						posts:[
-							{
-								url:'http://127.0.0.1'
-								title:'Testing~Testing~'
-								dl_count:12
-								comm_count:20
-								fav_count:233
-								prev:'/static/img/prev2.jpg'
-								prev_big:'/static/img/prev2.jpg'
-								tags:[
-									{name:'新番',id:'aDr'}
-									{name:'直角',id:'aDC'}
-								]
-								author:{
-									url:'http://127.0.0.1'
-									name:'加大号的猫'
-								}
-							}
-						],htmlProc(@)
+			nav_index:0
+			pop_tags:[
+				{name:'新番',id:'aDr'}
+				{name:'直角',id:'aDC'}
+			]
+			posts:[
+				{
+					url:'http://127.0.0.1'
+					title:'Testing~Testing~'
+					dl_count:12
+					comm_count:20
+					fav_count:233
+					prev:'/static/img/prev2.jpg'
+					prev_big:'/static/img/prev2.jpg'
+					tags:[
+						{name:'新番',id:'aDr'}
+						{name:'直角',id:'aDC'}
+					]
+					author:{
+						url:'http://127.0.0.1'
+						name:'加大号的猫'
+					}
+				}
+			],htmlProc(@)
 
 
 
