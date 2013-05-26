@@ -120,7 +120,7 @@ function layoutWorkPanel() {
         $(this).find("div.img-lightbox-controls").slideUp("fast");
     });
     //convert the more content link to a relief button.
-    $(".more_content_button_wrapper").convertToButton();
+    $(".more-content-button-wrapper").convertToButton();
     //Apply FancyBox to light box controls
     //This version have bug, so, make sure have helpers property like this.
     $(".zoom-in-tool").fancybox({
@@ -140,7 +140,7 @@ function layoutWorkPanel() {
     
     $(".work-title a").ellipsis({"width":workTitleWidth, "useContainerPadding": true, "useContainerMargin": false});
 
-    $(".category_paginater").paginator({
+    $(".category-paginater").paginator({
         "totalItems": 500,
         "num_per_page": 16,
         "currentPage": 0,
@@ -154,7 +154,7 @@ function layoutWorkPanel() {
     });
     $(".page_button_wrapper").convertToButton();
     
-    $(".category_paginater").each(function(){
+    $(".category-paginater").each(function(){
         var paginator_width = 0;
         $(this).children().each(function() {
             var child = $(this);

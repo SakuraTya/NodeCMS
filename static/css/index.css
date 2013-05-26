@@ -309,12 +309,12 @@ div.work-special-indicator {
     background-position: -310px 0;
 }
 
-.page_navigator_holder {
+.page-navigator-holder {
     width: 100%;
     height: 31px;
 }
 
-.page_navigator_holder .more_content_button_wrapper {
+.page-navigator-holder .more-content-button-wrapper {
     height: 31px;
     width: 79px;
     display: block;
@@ -323,7 +323,7 @@ div.work-special-indicator {
     margin-right: 46px;
 }
 
-.more_content_button_wrapper span {
+.more-content-button-wrapper span {
     line-height: 31px;
     font-size: 1em;
     color: #a6a6a6;
@@ -332,7 +332,7 @@ div.work-special-indicator {
     padding-left: 15px;
 }
 
-.right_arrow_icon {
+.right-arrow-icon {
     background: url("../img/spirite.png") no-repeat;
     background-position: -300px -114px;
     width: 9px;
