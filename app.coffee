@@ -28,12 +28,17 @@ require('zappajs').run server_opts,->
 	@app.set('views','./views/')
 	@get '/': ->
 		@render 'theme/index.swig',
+			requirejs:'index'
 			nav_index:0
 			pop_tags:[
 				{name:'新番',id:'aDr'}
 				{name:'直角',id:'aDC'}
 			]
-			posts:[
+			new_tags:[
+				{name:'新番',id:'aDr'}
+				{name:'直角',id:'aDC'}
+			]
+			pop_posts:[
 				{
 					url:'http://127.0.0.1'
 					title:'Testing~Testing~'
@@ -51,7 +56,29 @@ require('zappajs').run server_opts,->
 						name:'加大号的猫'
 					}
 				}
-			],htmlProc(@)
+			]
+			new_posts:[
+				{
+					url:'http://127.0.0.1'
+					title:'Testing~Testing~'
+					dl_count:12
+					comm_count:20
+					fav_count:233
+					prev:'/static/img/prev2.jpg'
+					prev_big:'/static/img/prev2.jpg'
+					tags:[
+						{name:'新番',id:'aDr'}
+						{name:'直角',id:'aDC'}
+					]
+					author:{
+						url:'http://127.0.0.1'
+						name:'加大号的猫'
+					}
+				}
+			]
+
+
+			,htmlProc(@)
 
 
 
@@ -74,3 +101,6 @@ require('zappajs').run server_opts,->
 
 	@get '/admin/media/image/editor_browse':->
 		@render 'admin/editor_browse.swig',null,htmlProc @
+
+
+	

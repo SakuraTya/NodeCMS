@@ -3,7 +3,11 @@
 <html>
 <head>
 	<title>{% block title %}{% endblock %}</title>
-	{{ css('css/theme.css') }}
+	<script type='text/javascript'>
+	window.itemIndex = 1;
+	</script>
+	{{ css('css/style.css') }}
+	{{ css('css/jquery.ultrawidget-1.0.css') }}
 	{{ css('fancybox/jquery.fancybox.css') }}
 	{% block css %}{% endblock %}
 </head>
@@ -17,16 +21,25 @@
 </div>
 {% include 'theme/navbar.swig' %}
 {% block body %}{% endblock %}
-{{js('js/theme.js')}}
-{{ js('js/core.js') }}
-{{ js('js/jquery.ultrawidget-1.0.js') }}
-{% block js %}{% endblock %}
+{% include 'theme/footer.swig'%}
+{{ js('js/require.js') }}
 <script type="text/javascript">
-	$(document).ready(function() {
-		var global_StartItem = {{ nav_index }}; //this javascript variable need to convert to php variable.
-		navMenuBuilding(global_StartItem);
-
+	require.config({
+		baseUrl:'/static/js/',
+		paths:{
+			jquery:'jquery-1.8.0',
+			'jquery.fancybox':'jquery.fancybox',
+			'jquery.lavalamp':'jquery.lavalamp-1.4',
+			'jquery.ultrawidget':'jquery.ultrawidget-1.0',
+			'dropdown':'theme/dropdown'
+		},
+		shim:{
+			'jquery.fancybox':['jquery'],
+			'jquery.lavalamp':['jquery'],
+			'jquery.ultrawidget':['jquery']
+		}
 	});
+	requirejs(['/static/js/theme/nav.js','/static/js/theme/pages/{{ requirejs }}.js']);
 </script>
 </body>
 </html>
