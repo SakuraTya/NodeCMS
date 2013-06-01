@@ -1,0 +1,21 @@
+{
+    "groups":{
+        "root":[
+            "user_c","user_r","user_u","user_d",
+            "post_c","post_u","post_d","media_c",
+            "media_r","media_u","media_d","site",
+            "comment_c","comment_r","comment_u","comment_d"
+        ],
+        "admin":[
+            "user_c","user_r","user_u","user_d",
+            "post_c","post_u","post_d","media_c",
+            "media_r","media_u","media_d","comment_c",
+            "comment_r","comment_u","comment_d"
+        ],
+        "user":[
+            "user_self_u","post_c","post_self_u","post_self_d",
+            "media_c","media_r","media_self_u","media_self_d",
+            "comment_c","comment_self_u","comment_self_d"
+        ]
+    }
+}
