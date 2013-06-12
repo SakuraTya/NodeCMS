@@ -2,6 +2,7 @@ mongo = require 'mongoskin'
 db = mongo.db '127.0.0.1:27017/sakuratya?auto_reconnect=true&poolSize=10',safe:true
 global.CONFIG = JSON.parse(require('fs').readFileSync 'config.json')
 
+User = require './classes/user'
 bcrypt = require 'bcrypt'
 db.bind 'posts',
     insertNew:(post,fn)->
@@ -34,17 +35,18 @@ db.bind 'users',
 
 
     login:(email,pass,fn)->
-        this.find {email},(err,user)->
+        this.find({email}).toArray (err,user)->
             if err
                 return process.nextTick ->fn(err)
             if user.length is 0
                 return process.nextTick ->fn(null,'not_found')
+
             bcrypt.compare pass,user[0].passwd,(err,res)->
                 if err
                     return process.nextTick ->fn(err)
                 if !res
                     return process.nextTick ->fn null,'mismatch'
-                process.nextTick ->fn null,user[0]
+                process.nextTick ->fn null,new User user[0]
 
 
 

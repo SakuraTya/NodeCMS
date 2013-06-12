@@ -4,6 +4,8 @@ should = require 'should'
 
 
 after ->db.close()
+
+
 describe 'Posts',->
     afterEach (done)->
         db.posts.remove {test:true},done
@@ -17,23 +19,35 @@ describe 'Posts',->
         ,done
 
 describe 'Users',->
-    #afterEach (done)->
-    #    db.users.remove {test:true},done
-    uid = null
+    after (done)->
+        db.users.remove {test:true},done
+    _user = null
     it 'should create a new user with default permission',(done)->
         db.users.create
             email:'chengyuhui1@gmail.com'
             display_name:'Harry Cheng'
-            test:true
+            #test:true
             group:'admin'
             password:'bobyuan'
         ,(err,result)->
             return done err if err
-            uid = result[0]._id
             done err,result
 
-    it 'should verify the user\s password',(done)->
+    it 'should verify the user\s password(mismatch)',(done)->
+        db.users.login 'chengyuhui1@gmail.com','bobyuan_',(err,user)->
+            return done err if err
+            user.should.eql 'mismatch'
+            done()
 
+    it 'should verify the user\s password(match)',(done)->
+        db.users.login 'chengyuhui1@gmail.com','bobyuan',(err,user)->
+            return done err if err
+            user.should.have.property 'displayName'
+            _user = user
+            done()
+
+    it 'should verify the user can create post',->
+        _user.canDo('post_c').should.true
 
 
 

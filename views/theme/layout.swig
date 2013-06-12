@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% macro js url %}<script type="text/javascript" src="/static/{{ url }}"></script>{% endmacro %}
 {% macro css url %}<link rel="stylesheet" href="/static/{{ url }}">{% endmacro %}
 <html>
@@ -31,12 +32,14 @@
 			'jquery.fancybox':'jquery.fancybox',
 			'jquery.lavalamp':'jquery.lavalamp-1.4',
 			'jquery.ultrawidget':'jquery.ultrawidget-1.0',
+            'jquery.modal':'jquery.modal.min',
 			'dropdown':'theme/dropdown'
 		},
 		shim:{
 			'jquery.fancybox':['jquery'],
 			'jquery.lavalamp':['jquery'],
-			'jquery.ultrawidget':['jquery']
+			'jquery.ultrawidget':['jquery'],
+            'jquery.modal':['jquery']
 		}
 	});
 	requirejs(['/static/js/theme/nav.js','/static/js/theme/pages/{{ requirejs }}.js']);
